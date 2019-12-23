@@ -1,0 +1,24 @@
+package testingpkg;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Testing {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\VNY\\IET_work\\chromedriver_win32\\chromedriver.exe");
+		
+		ChromeDriver chrome=new ChromeDriver();
+		
+		chrome.get("https://accounts.google.com/");
+		
+		chrome.findElementByName("userName").sendKeys("pratik");
+		chrome.findElementByName("password").sendKeys("pratik123");
+		
+		
+		chrome.findElementByName("login").click();
+	}
+
+}
